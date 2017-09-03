@@ -1,0 +1,28 @@
+{
+  "name": "multi-projects-by-vue",
+  "version": "0.1.0",
+  "description": "通过vue构建的多项目应用，便于多项目共用组件",
+  "main": "index.js",
+  "scripts": {
+    "dist": "node index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/wuomzfx/multi-projects-by-vue.git"
+  },
+  "keywords": [
+    "vue",
+    "multi-projects"
+  ],
+  "author": "相学长",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/wuomzfx/multi-projects-by-vue/issues"
+  },
+  "homepage": "https://github.com/wuomzfx/multi-projects-by-vue#readme",
+  "devDependencies": {
+    "koa": "2.3.0",
+    "koa-static": "4.0.1"
+  }
+}

@@ -1,12 +1,18 @@
 // see http://vuejs-templates.github.io/webpack for documentation.
 var path = require('path')
+var projectName = path.resolve(__dirname, '..').split(path.sep).pop()
+
 module.exports = {
   build: {
+    // 静态资源通过时间戳or哈希值更新，如果是时间戳，设置为后台输出的模版语言
+    assetsVersionMode: '{{time()}}',
     env: require('./prod.env'),
-    index: path.resolve(__dirname, '../dist/index.html'),
-    assetsRoot: path.resolve(__dirname, '../../../dist'),
-    assetsSubDirectory: 'static',
+    index: path.resolve(__dirname, `../../../dist/${projectName}/index.html`),
+    assetsRoot: path.resolve(__dirname, '../../../dist/'),
+    assetsSubDirectory: `${projectName}/static`,
     assetsPublicPath: '/',
+    // dxy cdn assets path
+    // assetsPublicPath: 'https://assets.dxycdn.com/gitrepo/business-projects/dist/',
     productionSourceMap: true,
     // Gzip off by default as many popular static hosts such as
     // Surge or Netlify already gzip all static assets for you.
@@ -21,6 +27,7 @@ module.exports = {
     bundleAnalyzerReport: process.env.npm_config_report
   },
   dev: {
+    assetsVersionMode: 'hash',
     env: require('./dev.env'),
     port: 8080,
     autoOpenBrowser: true,
