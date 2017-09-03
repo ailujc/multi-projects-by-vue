@@ -25,8 +25,9 @@ var webpackConfig = merge(baseWebpackConfig, {
     chunkFilename: utils.assetsPath('js/[id].[chunkhash].js')
   },
   plugins: [
-    // Scope Hoisting，作用域提升，不再将各个模块作为闭包函数导出，统一放到一个函数作用域中
+    // Scope Hoisting
     new webpack.optimize.ModuleConcatenationPlugin(),
+    // http://vuejs.github.io/vue-loader/en/workflow/product
     // http://vuejs.github.io/vue-loader/en/workflow/production.html
     new webpack.DefinePlugin({
       'process.env': env

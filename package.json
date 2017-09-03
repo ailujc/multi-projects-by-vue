@@ -4,6 +4,7 @@
   "description": "通过vue构建的多项目应用，便于多项目共用组件",
   "main": "index.js",
   "scripts": {
+    // "init": "vue init wuomzfx/template-of-multi-projects projects/",
     "dist": "node index.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
@@ -23,6 +24,7 @@
   "homepage": "https://github.com/wuomzfx/multi-projects-by-vue#readme",
   "devDependencies": {
     "koa": "2.3.0",
-    "koa-static": "4.0.1"
+    "koa-static": "4.0.1",
+    "vue-cli": "2.8.2"
   }
 }
