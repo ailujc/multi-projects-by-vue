@@ -8,3 +8,5 @@ const app = new Koa()
 app.use(serve('./dist'))
 
 app.listen(3000)
+
+console.log('打开浏览器，访问localhost:3000/项目目录/')

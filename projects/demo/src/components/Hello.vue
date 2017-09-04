@@ -6,12 +6,16 @@
 </template>
 
 <script>
+import test from '~~/components/utils/index'
 export default {
   name: 'hello',
   data () {
     return {
       msg: 'Welcome to Your Vue.js App'
     }
+  },
+  mounted () {
+    test()
   }
 }
 </script>
